@@ -1,0 +1,10 @@
+.loading-container {
+    text-align: center; /* Center align spinner and text */
+    margin-top: 20px; /* Add space above the spinner */
+}
+
+.loading-container p {
+    margin-top: 10px; /* Add space between spinner and text */
+    font-size: 1rem; /* Adjust font size for better visibility */
+    color: #4b4b4b; /* Optional: Use a subtle gray color for text */
+}

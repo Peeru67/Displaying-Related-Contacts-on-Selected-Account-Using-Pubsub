@@ -1,0 +1,24 @@
+
+<template>
+    <!-- Show Account Details table and Next button -->
+    <template if:true={showAccountDetails}>
+        <lightning-card title="Account Details">
+            <lightning-datatable
+                key-field="Id"
+                data={accounts}
+                columns={columns}
+                max-row-selection="1"
+                onrowselection={handleRowSelection}>
+            </lightning-datatable>
+            <lightning-button label="Next" onclick={handleNext}></lightning-button>
+        </lightning-card>
+    </template>
+
+    <!-- Show Contact Details and Back button -->
+    <template if:true={showContactDetails}>
+        <lightning-card title="Contact Details">
+            <c-contact-details></c-contact-details>
+            <lightning-button label="Back" onclick={handleBack}></lightning-button>
+        </lightning-card>
+    </template>
+</template>

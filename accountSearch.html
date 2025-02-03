@@ -1,0 +1,19 @@
+<template>
+    <!-- Hide Account Search section if `hideSearchSection` is true -->
+    <template if:false={hideSearchSection}>
+        <lightning-card title="Account Search">
+            <lightning-input
+                type="text"
+                label="Search Accounts"
+                onchange={handleSearch}
+                value={searchKey}>
+            </lightning-input>
+        </lightning-card>
+    </template>
+
+    <!-- Display Account Details -->
+    <template if:true={accounts.length}>
+        <c-account-details></c-account-details>
+    </template>
+</template>
+

@@ -1,0 +1,23 @@
+
+<template>
+    <lightning-card title="Related Contacts">
+        <!-- Show spinner during loading -->
+        <template if:true={loading}>
+            <lightning-spinner alternative-text="Loading Contacts"></lightning-spinner>
+        </template>
+
+        <!-- Show contacts table only when there are contacts -->
+        <template if:true={hasContacts}>
+            <lightning-datatable
+                key-field="Id"
+                data={contacts}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+
+        <!-- Show "no contacts" message only when no contacts and not loading -->
+        <template if:true={showNoContactsMessage}>
+            <p>No contacts available for the selected account.</p>
+        </template>
+    </lightning-card>
+</template>
